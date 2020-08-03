@@ -680,6 +680,7 @@ GameObject:
   - component: {fileID: 995754085}
   - component: {fileID: 995754084}
   - component: {fileID: 995754083}
+  - component: {fileID: 995754087}
   m_Layer: 0
   m_Name: humster
   m_TagString: Untagged
@@ -695,7 +696,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995754082}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -755,13 +756,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995754082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.35, y: 0.38, z: 1.91}
+  m_LocalPosition: {x: -0.73, y: 0.38, z: 1.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1750280428}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &995754087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995754082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff8e7f21e0ded0c449677d2c46a983fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1025583101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1039,6 +1052,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1186470285, guid: b97faacacf28f8e4f8f0ad35b96cf243, type: 3}
+      propertyPath: m_Constraints
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 6901596116029861689, guid: b97faacacf28f8e4f8f0ad35b96cf243,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1113,6 +1130,7 @@ GameObject:
   - component: {fileID: 1750280431}
   - component: {fileID: 1750280430}
   - component: {fileID: 1750280429}
+  - component: {fileID: 1750280432}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -1142,7 +1160,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750280427}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1194,6 +1212,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750280427}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1750280432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750280427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff8e7f21e0ded0c449677d2c46a983fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2065047314
 PrefabInstance:
   m_ObjectHideFlags: 0
