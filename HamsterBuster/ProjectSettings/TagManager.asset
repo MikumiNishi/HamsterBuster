@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - seed
+  - humster
   layers:
   - Default
   - TransparentFX
