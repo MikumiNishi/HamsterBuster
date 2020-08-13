@@ -9,7 +9,7 @@ public class seedshooter : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) Shot();
+        if (Input.GetButtonDown("Fire2")) Shot();
     }
 
     public void Shot()
