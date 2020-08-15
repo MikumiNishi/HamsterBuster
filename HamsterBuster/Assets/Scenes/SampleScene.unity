@@ -620,13 +620,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804789292}
-  m_LocalRotation: {x: 0.47642055, y: -0.50553584, z: -0.5195942, w: 0.49747247}
+  m_LocalRotation: {x: 0.49278358, y: -0.482233, z: -0.4979931, w: 0.5259454}
   m_LocalPosition: {x: 0.07, y: -0.76, z: 1.08}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.68214, z: 1}
   m_Children: []
   m_Father: {fileID: 1287107005}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -2.943, y: -87.997, z: -89.651}
+  m_LocalEulerAnglesHint: {x: 2.181, y: -87.176, z: -88.949005}
 --- !u!114 &804789294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seedPrefab: {fileID: 6901596116029861693, guid: b97faacacf28f8e4f8f0ad35b96cf243,
     type: 3}
-  shotSpeed: 30
+  shotSpeed: 1
   shotTorque: 30
 --- !u!1 &962136447 stripped
 GameObject:
