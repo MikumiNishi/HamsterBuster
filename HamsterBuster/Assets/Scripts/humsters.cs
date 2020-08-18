@@ -45,11 +45,8 @@ public class humsters : MonoBehaviour
 		//　出現させる敵をランダムに選ぶ
 		var randomValue = Random.Range(0, humster.Length);
 		//　敵の向きをランダムに決定
-<<<<<<< HEAD
 		var RotationZ= 90f;
-=======
-		var randomRotationZ= Random.value * 90f;
->>>>>>> 8月13日～作業ブランチ
+
 
 		GameObject.Instantiate(humster[randomValue], transform.position, Quaternion.Euler(0f, RotationZ, 0f));
 
