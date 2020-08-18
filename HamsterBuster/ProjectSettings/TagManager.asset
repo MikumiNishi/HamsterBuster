@@ -6,6 +6,7 @@ TagManager:
   tags:
   - seed
   - humster
+  - Wall
   layers:
   - Default
   - TransparentFX
