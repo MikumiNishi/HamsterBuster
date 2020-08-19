@@ -5,53 +5,60 @@ using UnityEngine.UI; //UIの追加
 
 public class ScoreManagerSc : MonoBehaviour
 {
-    public GameObject score_object = null; //textオブジェクト
     public Text scoreText;
-    public int score_num = 0; //スコア変数
+    public Text highscoreText;
 
+    private int score; //スコア変数
+    private int highScore;
+    private string highScoreKey = "highscore";
 
     //初期化
     // Start is called before the first frame update
     void Start()
     {
-        score_num = 0;
-        SetScore();
+        Intialize();
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void Update()
     {
-        string yourTag = collision.gameObject.tag;
-
-        if (yourTag == "humster")
+        //scoreがハイスコアより大きければ
+        if (highScore < score)
         {
-            score_num += 150;
+            highScore = score;
         }
-        else
-        {
-            score_num = 0;
-        }
+        //スコア・ハイスコアを表示する
+        scoreText.text = score.ToString();
+        highscoreText.text = highScore.ToString();
+    }
 
-        SetScore();
+    //ゲーム開始前の状態に戻す
+    public void Intialize()
+    {
+        // スコアを0にする
+        score = 0;
+
+        //ハイスコアを取得する 無い時は0
+        highScore = PlayerPrefs.GetInt(highScoreKey, 0);
 
     }
 
-    void SetScore()
+    //ポイントの追加
+    public void AddPoint(int point)
     {
-        scoreText.text = string.Format("Score:{0}", score_num);
+        score = score + point;
 
     }
 
-
-    //ここいる？↓
-    private void OnGUI()
+    //ハイスコアの保存
+    public void Save()
     {
-        GUI.color = Color.black;
+        //ハイスコアを保存して、
+        PlayerPrefs.SetInt(highScoreKey, highScore);
+        PlayerPrefs.Save();
 
-        //現在のスコアを表示
-        string label = "Score : " + score_num;
-
-        GUI.Label(new Rect(0, 0, 100, 30), label);
+        //ゲーム開始前の状態に戻す
+        Intialize();
     }
 
 }
