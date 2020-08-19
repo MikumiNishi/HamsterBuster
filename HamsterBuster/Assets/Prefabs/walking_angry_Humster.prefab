@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 7597282706671981909}
   m_Layer: 0
   m_Name: walking_angry_Humster
-  m_TagString: Untagged
+  m_TagString: humster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

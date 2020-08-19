@@ -5,27 +5,71 @@ using UnityEngine.UI; //UIの追加
 
 public class ScoreManagerSc : MonoBehaviour
 {
-    public GameObject score_object = null; //textオブジェクト
-    public int score_num = 0; //スコア変数
+    public Text scoreText;
+    public Text highscoreText;
+    public Text humsterNumText;
 
+    private int score; //スコア変数
+    private int highScore;
+    private string highScoreKey = "highscore";
+
+    GameObject[] humsterObjects;
+    private int humsterNum;
 
     //初期化
     // Start is called before the first frame update
     void Start()
     {
-        
+        Intialize();
+
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
-        //オブジェクトからTextコンポーネントを取得
-        Text score_text = score_object.GetComponent<Text>();
-        //テキストの表示を入れ替える
-        score_text.text = "Score : " + score_num;
-        
-        score_num += 1; //とりあえず１加算し続ける
+        //scoreがハイスコアより大きければ
+        if (highScore < score)
+        {
+            highScore = score;
+        }
+        //スコア・ハイスコアを表示する
+        scoreText.text = score.ToString();
+        highscoreText.text = highScore.ToString();
 
-        
+        //ハムスターの現在の数を表示する
+        humsterObjects = GameObject.FindGameObjectsWithTag("humster");
+        humsterNum = humsterObjects.Length;
+        humsterNumText.text = humsterNum.ToString();
+
     }
+
+    //ゲーム開始前の状態に戻す
+    public void Intialize()
+    {
+        // スコアを0にする
+        score = 0;
+
+        //ハイスコアを取得する 無い時は0
+        highScore = PlayerPrefs.GetInt(highScoreKey, 0);
+
+    }
+
+    //ポイントの追加
+    public void AddPoint(int point)
+    {
+        score = score + point;
+
+    }
+
+    //ハイスコアの保存
+    public void Save()
+    {
+        //ハイスコアを保存して、
+        PlayerPrefs.SetInt(highScoreKey, highScore);
+        PlayerPrefs.Save();
+
+        //ゲーム開始前の状態に戻す
+        Intialize();
+    }
+
 }
