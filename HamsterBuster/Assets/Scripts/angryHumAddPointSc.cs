@@ -12,7 +12,7 @@ public class angryHumAddPointSc : MonoBehaviour
             //スコア処理を追加
             FindObjectOfType<ScoreManagerSc>().AddPoint(150);
 
-            //相手のタグがBallならば、自分を消す
+            //相手のタグがseedならば、自分を消す
             Destroy(this.gameObject);
         }
     }

@@ -7,10 +7,14 @@ public class ScoreManagerSc : MonoBehaviour
 {
     public Text scoreText;
     public Text highscoreText;
+    public Text humsterNumText;
 
     private int score; //スコア変数
     private int highScore;
     private string highScoreKey = "highscore";
+
+    GameObject[] humsterObjects;
+    private int humsterNum;
 
     //初期化
     // Start is called before the first frame update
@@ -19,6 +23,7 @@ public class ScoreManagerSc : MonoBehaviour
         Intialize();
 
     }
+
 
     private void Update()
     {
@@ -30,6 +35,12 @@ public class ScoreManagerSc : MonoBehaviour
         //スコア・ハイスコアを表示する
         scoreText.text = score.ToString();
         highscoreText.text = highScore.ToString();
+
+        //ハムスターの現在の数を表示する
+        humsterObjects = GameObject.FindGameObjectsWithTag("humster");
+        humsterNum = humsterObjects.Length;
+        humsterNumText.text = humsterNum.ToString();
+
     }
 
     //ゲーム開始前の状態に戻す
