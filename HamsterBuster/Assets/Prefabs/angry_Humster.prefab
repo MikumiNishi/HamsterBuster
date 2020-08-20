@@ -78,7 +78,6 @@ GameObject:
   - component: {fileID: 7136116841828859299}
   - component: {fileID: 10847359}
   - component: {fileID: 10847360}
-  - component: {fileID: 8905267310587519071}
   m_Layer: 0
   m_Name: angry_Humster
   m_TagString: humster
@@ -201,18 +200,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff8e7f21e0ded0c449677d2c46a983fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8905267310587519071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241178121205167410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93331e01d7b9e1c46bab727d3863e167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1388985881329494178
